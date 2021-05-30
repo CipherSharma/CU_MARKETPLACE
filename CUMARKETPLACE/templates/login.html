@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="../static/login/avatar.png" type="image/icon type">
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="../static/login/Login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="container">
+		<div class="img">
+			<img src="../static/signup/sk.png">
+		</div>
+		<div class="login-content">
+			<form method= "post" action="/login">
+			{% csrf_token %}
+				<img src="../static/login/avatar.png">
+				<h2 class="title">CU MARKETPLACE</h2>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>UID</h5>
+						<input type="text" name ="username" class="input">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" name="password" class="input">
+					</div>
+				</div>
+				{% for message in messages %}
+					<p id="messages">{{message}}</p>
+				
+				{% endfor %}
+				<a href="/signup">Create an Account
+					<a href="/reset_password">Forgot Password?</a>
+					<input type="submit" class="btn">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="../static/login/login.js"></script>
+</body>
+
+</html>

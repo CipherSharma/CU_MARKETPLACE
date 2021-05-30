@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<STYLE>A {text-decoration: none;} </STYLE>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "index/navstyle.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>CU Market</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4><a href="/">CU MARKETPLACE</a></h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/logout">Log Out</a>
+            </li>
+             <li>
+                <a href="/product_sell">Buy Product</a>
+            </li>
+            <li>
+                <a href="/product_reg">Register Product</a>
+            </li>
+            <li>
+                <a href="/contactus">Contact us</a>
+            </li>
+          
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <script src = "{% static "index/app.js" %}"></script>
+  </body>
+  </html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="{% static "aboutus/cardstyle.css" %}">
+            <title>About</title>
+        </head>
+            <body>
+                <div id="container">
+                    <div class="product-details">
+                        <h1>About us </h1><br><br><br>
+                        <p class="information"> This website is brought together by the collaborate effort of  
+                        all our team members . namely Debobrata Borah who got the idea to build such a website .
+                        Which could help collage students to reduce there expenses. Dhruv Dhiman Who built the 
+                        front end of this site by working together with Debobrata Borah using HTML, CSS and JS. 
+                        Bhuvan Raheja and Me (Tushar Sharma) Who made the backend of the site by using Django.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

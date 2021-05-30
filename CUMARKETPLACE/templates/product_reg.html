@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "product_reg/navstyle.css" %}">
+    <link rel="stylesheet" href="{% static "product_reg/uploadpage.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>CU Market</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4><a href="/">CU MARKETPLACE</a></h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/logout">Log Out</a>
+            </li>
+            <li>
+                <a href="/signup">Sign Up</a>
+            </li>
+            <li>
+                <a href="/contactus">Contact us</a>
+            </li>
+            <li>
+              <a href="/aboutus">About Us</a>
+          </li>
+            <li>
+                <a href="/product_sell">Buy Product</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <script src = "{% static "product_reg/app.js" %}"></script>
+    <html>
+        <div class="loginBox"> 
+            <h1>Upload Item</h1><br>
+            <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+                 <p>Seller Name</p>
+                {{form.sellername}}
+                <p>Item Name</p>
+                {{form.itemname}}
+                <p>Address / Hostel Name</p>
+                {{form.address}}
+                <p>Description</p>
+                {{form.description}}
+                <p>Email</p>
+                {{form.email}}
+                <p>Price</p>
+                {{form.price}}
+                <label class="form-label" for="customFile"></label>
+               
+                <div class="upload-btn-wrapper">
+                    <p>Upload Image</p><br>
+                   {{form.image}}
+                    <button type="submit" class="btn">Upload Product Image</button>
+                </div>
+
+                 {% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %}
+                <input type="submit" name ="btn" value="Submit">
+            </form>
+           
+        </div>
+</body>
+<!--</html>-->
